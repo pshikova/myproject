@@ -1,0 +1,132 @@
+body {
+	background: url("../images/bg-intro-desktop.png");
+	background-color: rgb(255, 122, 122);
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.left-side-text{
+	display: flex;
+        /*width: 50%;*/
+        /*height: 200px;*/
+    margin: auto;
+        /*border-radius: 10px;*/
+        /*border: 3px dashed #1c87c9;*/
+        /*align-items:center;*/
+        /*justify-content:center;*/
+}
+
+.left-side-text h1 {
+	font-size: 3.0rem;
+	font-weight: 700;
+}
+
+.left-side-text h1, .left-side-text p, .login-form .free-option{
+	color: #fff;
+}
+
+.login-form .free-option span{
+	font-weight: bold;
+}
+
+.login-form .free-option {
+	margin: 70px 0 25px 0;
+	display: block;
+	background-color: #6055A5;
+	border-radius: 8px;
+	height: 60px;
+	line-height: 60px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+.login-form .free-option:hover {
+	text-decoration: none;
+}
+
+.login-form form {
+	background-color: #fff;
+	border-radius: 8px;
+	padding-top: 40px;
+}
+
+.login-form .form-control {
+	font-size: 14px;
+	padding:20px;
+}
+
+.login-form .col-md-10 {
+	margin: 0 auto;
+}
+
+.login-form form .btn-primary {
+	margin: 0 auto;
+    width: 82%;
+    margin-bottom: 20px;
+    background: #38CC8C;
+    border-color: #38CC8C;
+    text-transform: uppercase;
+
+}
+
+.login-form form .btn-primary:hover {
+	background: #38CC8C;
+	border-color: #38CC8C;
+}
+
+.login-form form .info-text {
+	color: #cecece;
+	font-size: 10px;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.login-form form .info-text a {
+	color: rgb(255, 122, 122);
+	font-size: 10px;
+}
+
+.login-form #firstNameError,
+.login-form #lastNameError,
+.login-form #emailError,
+.login-form #passwordError {
+	display: block;
+	font-size:12px;
+	color: rgb(255, 122, 122);
+	text-align: right;
+}
+
+.login-form #firstNameError::before,
+.login-form #lastNameError::before ,
+.login-form #emailError::before ,
+.login-form #passwordError::before {
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		content: "!";
+		border-radius: 50%;
+		border: 1px solid rgb(255, 122, 122);;
+		width: 20px;
+		height: 20px;
+		line-height: 22px;
+		text-align: center;
+		color: white;
+		font-weight: normal;
+		background-color: rgb(255, 122, 122);
+}
+
+.login-form .email-placeholder::-webkit-input-placeholder {
+	color: rgb(255, 122, 122);
+}
+
+
+@media (max-width: 767px) { 
+
+	.left-side-text {
+		text-align: center;
+		padding-top: 100px;
+	}
+}
+

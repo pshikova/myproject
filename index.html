@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.0.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="js/index.js"></script>
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 left-side-text col-sm-12">
+        <div class="">
+          <h1>Learn to code by watching others</h1>
+          <p>See how experienced developers slove problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.</p>
+        </div>
+      </div><!-- /.col-6 -->
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="login-form">
+
+            <a href="#" class="free-option"><span>Try it free days</span> then $20/mo. thereafter</a>
+
+            <form name="loginForm"  method="POST">
+              <div class="form-row">
+
+                <div class="col-md-10 col-sm-10 col-10">
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="firstName" id="exampleInputFirstName" aria-describedby="emailHelp" placeholder="First Name">
+                    <span id="firstNameError" hidden>The first name is empty or incorrect</span>
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                  </div>
+                </div>
+
+                <div class="col-md-10 col-sm-10 col-10">
+                  <div class="form-group">
+                    <input type="text" name="lastName" class="form-control sm-10" id="exampleInputLastName" placeholder="Last Name">
+                    <span id="lastNameError" hidden>The last name is empty or incorrect</span>
+                  </div>
+                </div>
+
+                <div class="col-md-10 col-10">
+                  <div class="form-group">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail" placeholder="Email Address">
+                    <span id="emailError" hidden>The email is empty or incorrect</span>
+                  </div>
+                </div>
+
+                <div class="col-md-10 col-10">
+                  <div class="form-group">
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+                    <span id="passwordError" hidden>The password is empty or incorrect</span>
+                  </div>
+                </div>
+                <button type="button"  class="btn btn-primary" id="checkAllInputFields" onclick="formValidate();">Claim your free trial</button>
+
+                <!-- <input  type="button" class="btn btn-primary" id="checkAllInputFields"  onclick="formValidate();" value=""/> -->
+              
+              </div><!-- /.form-row -->
+
+              <p class="info-text">By clicking the button, you are agrecing to our <a href="#">Terms and Services</a></p>
+            </form>
+
+        </div><!-- /.login-form -->
+      </div><!-- /.col-6 -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</div><!-- /.content -->
+  <footer>
+   <!--  <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p> -->
+  </footer>
+</body>
+</html>
