@@ -1,5 +1,4 @@
-function formValidate() {
-	
+function formValidate(e) {
 	var firstName = document.forms["loginForm"]["firstName"];
 	var lastName = document.forms["loginForm"]["lastName"];
 	var email = document.forms["loginForm"]["email"];
@@ -8,6 +7,7 @@ function formValidate() {
 	var validEmail = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$");
 	var validPassword = new RegExp("^(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[!#\$%&\?].*).{8,}$");
 	var inputs = document.forms["loginForm"].getElementsByTagName("input").length;
+	var valid = true;
 	
 	for (var i =0; i< inputs; i++) {
 
@@ -15,6 +15,7 @@ function formValidate() {
 
 			document.getElementById("firstNameError").removeAttribute("hidden");
 			document.getElementById("exampleInputFirstName").style.borderColor = "#FF7A7A";
+			valid = false;
 				
 		} else {
 
@@ -26,6 +27,7 @@ function formValidate() {
 
 			document.getElementById("lastNameError").removeAttribute("hidden");
 			document.getElementById("exampleInputLastName").style.borderColor = "#FF7A7A";
+			valid = false;
 
 		} else {
 
@@ -39,6 +41,7 @@ function formValidate() {
 			document.getElementById("exampleInputEmail").style.borderColor = "#FF7A7A";
 			email.placeholder = "email@example/com";
 			email.classList.add('email-placeholder');
+			valid = false;
 
 		} else {
 
@@ -48,10 +51,11 @@ function formValidate() {
 			email.classList.remove('email-placeholder');
 		}
 
-		if(!validPassword.test(password.value) || password.value === "") {
+		if (!validPassword.test(password.value) || password.value === "") {
 
 			document.getElementById("passwordError").removeAttribute("hidden");
 			document.getElementById("exampleInputPassword").style.borderColor = "#FF7A7A";
+			valid = false;
 
 		} else {
 
@@ -60,6 +64,8 @@ function formValidate() {
 		}
 	
 	}
+
+	return valid;
 
 }
 
